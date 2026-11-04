@@ -50,6 +50,7 @@ const mapStory = (r, full = false) => ({
   ...(full && {
     body: r.fields.Story_Body || "",
     links: r.fields.External_Links || "",
+    contributor: r.fields.Contributor || "",
   }),
 });
 
