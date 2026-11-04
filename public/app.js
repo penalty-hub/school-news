@@ -119,6 +119,7 @@
         <a class="back" href="#/${school ? "school/" + school.id : ""}">← ${school ? esc(school.name) : "All schools"}</a>
         <div class="meta"><span>${fmtDate(story.date)}</span>${story.category ? `<span class="tag">${esc(story.category)}</span>` : ""}</div>
         <h1>${esc(story.title)}</h1>
+                ${story.contributor ? `<p class="meta" style="margin-bottom:1rem">Submitted by <strong style="color:var(--amber)">${esc(story.contributor)}</strong></p>` : ""}
         ${story.thumbnail ? `<img class="article-img" src="${esc(story.thumbnail)}" alt="Image for: ${esc(story.title)}">` : ""}
         <div class="prose">${markdown(story.body)}</div>
         ${links.length ? `<section class="links-box"><h2>External Links</h2><ul>
